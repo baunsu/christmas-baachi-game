@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbd4tyxak7xn5"]
+
+[ext_resource type="Texture2D" uid="uid://dma4brwigvcxu" path="res://sprites/laughpika.png" id="1_l4l3p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbx4u"]
+size = Vector2(32, 32)
+
+[node name="Player" type="Area2D"]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_l4l3p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xbx4u")

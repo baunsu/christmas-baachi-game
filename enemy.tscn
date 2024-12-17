@@ -1,0 +1,151 @@
+[gd_scene load_steps=33 format=3 uid="uid://w1dpea27o4ra"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_jaoaa"]
+[ext_resource type="Texture2D" uid="uid://icldij7yiovw" path="res://sprites/festive_baachipls/tile000.png" id="1_mqqr8"]
+[ext_resource type="Texture2D" uid="uid://dmpat05n4mc3g" path="res://sprites/festive_baachipls/tile001.png" id="2_fidid"]
+[ext_resource type="Texture2D" uid="uid://bjipyvi8ew4yn" path="res://sprites/festive_baachipls/tile002.png" id="3_k7gol"]
+[ext_resource type="Texture2D" uid="uid://bh66pqjsgni4v" path="res://sprites/festive_baachipls/tile003.png" id="4_hbxr2"]
+[ext_resource type="Texture2D" uid="uid://u21rtxlgtyc6" path="res://sprites/festive_baachipls/tile004.png" id="5_43ymj"]
+[ext_resource type="Texture2D" uid="uid://dhk0ft5x71c0x" path="res://sprites/festive_baachipls/tile005.png" id="6_hk6bs"]
+[ext_resource type="Texture2D" uid="uid://dukppi0vi0oy4" path="res://sprites/festive_baachipls/tile006.png" id="7_tepsw"]
+[ext_resource type="Texture2D" uid="uid://cwf260lg0ya7l" path="res://sprites/festive_baachipls/tile007.png" id="8_hi6s8"]
+[ext_resource type="Texture2D" uid="uid://cv64jcgfm7f82" path="res://sprites/festive_baachipls/tile008.png" id="9_0d2xb"]
+[ext_resource type="Texture2D" uid="uid://boemdw6xpgm55" path="res://sprites/festive_baachipls/tile009.png" id="10_rgqg4"]
+[ext_resource type="Texture2D" uid="uid://6oqdelhi0ql1" path="res://sprites/festive_baachipls/tile010.png" id="11_sv3yb"]
+[ext_resource type="Texture2D" uid="uid://cq04820613uqq" path="res://sprites/festive_baachipls/tile011.png" id="12_0el6x"]
+[ext_resource type="Texture2D" uid="uid://cfopi4hxmo62m" path="res://sprites/festive_baachipls/tile012.png" id="13_b6aqm"]
+[ext_resource type="Texture2D" uid="uid://xedb7xtqy24y" path="res://sprites/festive_baachipls/tile013.png" id="14_bhwf4"]
+[ext_resource type="Texture2D" uid="uid://c7xi6ik63o6ft" path="res://sprites/festive_baachipls/tile014.png" id="15_4moct"]
+[ext_resource type="Texture2D" uid="uid://cly7x2egcskhu" path="res://sprites/festive_baachipls/tile015.png" id="16_2hn4t"]
+[ext_resource type="Texture2D" uid="uid://8gn5g4v8xyh2" path="res://sprites/festive_baachipls/tile016.png" id="17_dr5cn"]
+[ext_resource type="Texture2D" uid="uid://vsdnw5pbaymg" path="res://sprites/festive_baachipls/tile017.png" id="18_hp8tt"]
+[ext_resource type="Texture2D" uid="uid://dx4moibvehnjs" path="res://sprites/festive_baachipls/tile018.png" id="19_o25s2"]
+[ext_resource type="Texture2D" uid="uid://b0swbvsg1w052" path="res://sprites/festive_baachipls/tile019.png" id="20_k5ogs"]
+[ext_resource type="Texture2D" uid="uid://bor0lvx2r6i4f" path="res://sprites/festive_baachipls/tile020.png" id="21_2ph2b"]
+[ext_resource type="Texture2D" uid="uid://du1pmgosgwjm2" path="res://sprites/festive_baachipls/tile021.png" id="22_nis2h"]
+[ext_resource type="Texture2D" uid="uid://b3qi5pl87qqrb" path="res://sprites/festive_baachipls/tile022.png" id="23_y413j"]
+[ext_resource type="Texture2D" uid="uid://sbnnrhpi7jna" path="res://sprites/festive_baachipls/tile023.png" id="24_mthlu"]
+[ext_resource type="Texture2D" uid="uid://ct7jf6rm8cj80" path="res://sprites/festive_baachipls/tile024.png" id="25_u1pm7"]
+[ext_resource type="Texture2D" uid="uid://b5hatiilc7stf" path="res://sprites/festive_baachipls/tile025.png" id="26_cn3nj"]
+[ext_resource type="Texture2D" uid="uid://dog6aosvlpgpy" path="res://sprites/festive_baachipls/tile026.png" id="27_x5jrh"]
+[ext_resource type="Texture2D" uid="uid://bpug7rtr1pdgj" path="res://sprites/festive_baachipls/tile027.png" id="28_uefwd"]
+[ext_resource type="Texture2D" uid="uid://bc467bqaww2xt" path="res://sprites/festive_baachipls/tile028.png" id="29_e7uii"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8rcxc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mqqr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fidid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_k7gol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hbxr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_43ymj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hk6bs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tepsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hi6s8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0d2xb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rgqg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_sv3yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_0el6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_b6aqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_bhwf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4moct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2hn4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_dr5cn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_hp8tt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_o25s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_k5ogs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_2ph2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_nis2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_y413j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_mthlu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_u1pm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_cn3nj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_x5jrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_uefwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_e7uii")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gsy7i"]
+size = Vector2(52, 68)
+
+[node name="Baachi" type="RigidBody2D" groups=["Baachi"]]
+collision_layer = 2
+collision_mask = 4
+gravity_scale = 0.0
+script = ExtResource("1_jaoaa")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_8rcxc")
+frame = 22
+frame_progress = 0.423612
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 0
+shape = SubResource("RectangleShape2D_gsy7i")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." groups=["Baachi"]]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

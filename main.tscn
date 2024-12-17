@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://itumbk8qjpc2"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_5tgvq"]
+[ext_resource type="PackedScene" uid="uid://w1dpea27o4ra" path="res://enemy.tscn" id="2_2ai1k"]
+[ext_resource type="PackedScene" uid="uid://bbd4tyxak7xn5" path="res://player.tscn" id="3_mvnoj"]
+
+[sub_resource type="Curve2D" id="Curve2D_ameor"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -243, -448, 0, 0, 0, 0, 757, -453, 0, 0, 0, 0, 760, 552, 0, 0, 0, 0, -245, 552, 0, 0, 0, 0, -243, -448)
+}
+point_count = 5
+
+[node name="Main" type="Node"]
+script = ExtResource("1_5tgvq")
+mob_scene = ExtResource("2_2ai1k")
+
+[node name="Player" parent="." instance=ExtResource("3_mvnoj")]
+
+[node name="BaachiTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="StartPos" type="Marker2D" parent="."]
+position = Vector2(400, 450)
+
+[node name="BaachiPath" type="Path2D" parent="."]
+position = Vector2(190.149, 403.573)
+scale = Vector2(0.776119, 0.897512)
+curve = SubResource("Curve2D_ameor")
+
+[node name="BaachSpawnLocation" type="PathFollow2D" parent="BaachiPath"]
+position = Vector2(-243, -448)
+rotation = -0.00499996
+
+[connection signal="timeout" from="BaachiTimer" to="." method="_on_baachi_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]

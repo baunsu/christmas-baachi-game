@@ -1,14 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://itumbk8qjpc2"]
+[gd_scene load_steps=8 format=3 uid="uid://itumbk8qjpc2"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_5tgvq"]
-[ext_resource type="PackedScene" uid="uid://w1dpea27o4ra" path="res://enemy.tscn" id="2_2ai1k"]
-[ext_resource type="PackedScene" uid="uid://bbd4tyxak7xn5" path="res://player.tscn" id="3_mvnoj"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_5tgvq"]
+[ext_resource type="PackedScene" uid="uid://w1dpea27o4ra" path="res://scenes/enemy.tscn" id="2_2ai1k"]
+[ext_resource type="PackedScene" uid="uid://bbd4tyxak7xn5" path="res://scenes/player.tscn" id="3_mvnoj"]
+[ext_resource type="Texture2D" uid="uid://c4dyfyetc5p7g" path="res://sprites/tiles/snow.png" id="4_0xs28"]
 
 [sub_resource type="Curve2D" id="Curve2D_ameor"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -243, -448, 0, 0, 0, 0, 757, -453, 0, 0, 0, 0, 760, 552, 0, 0, 0, 0, -245, 552, 0, 0, 0, 0, -243, -448)
 }
 point_count = 5
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8cgea"]
+texture = ExtResource("4_0xs28")
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_t3yq0"]
+sources/1 = SubResource("TileSetAtlasSource_8cgea")
 
 [node name="Main" type="Node"]
 script = ExtResource("1_5tgvq")
@@ -34,6 +45,9 @@ curve = SubResource("Curve2D_ameor")
 [node name="BaachSpawnLocation" type="PathFollow2D" parent="BaachiPath"]
 position = Vector2(-243, -448)
 rotation = -0.00499996
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_t3yq0")
 
 [connection signal="timeout" from="BaachiTimer" to="." method="_on_baachi_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]

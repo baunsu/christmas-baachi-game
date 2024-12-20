@@ -1,6 +1,6 @@
 [gd_scene load_steps=33 format=3 uid="uid://w1dpea27o4ra"]
 
-[ext_resource type="Script" path="res://enemy.gd" id="1_jaoaa"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_jaoaa"]
 [ext_resource type="Texture2D" uid="uid://icldij7yiovw" path="res://sprites/festive_baachipls/tile000.png" id="1_mqqr8"]
 [ext_resource type="Texture2D" uid="uid://dmpat05n4mc3g" path="res://sprites/festive_baachipls/tile001.png" id="2_fidid"]
 [ext_resource type="Texture2D" uid="uid://bjipyvi8ew4yn" path="res://sprites/festive_baachipls/tile002.png" id="3_k7gol"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bbd4tyxak7xn5"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_vqpji"]
-[ext_resource type="PackedScene" uid="uid://b8c5igsv2gu6n" path="res://gift.tscn" id="2_gan4w"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_vqpji"]
+[ext_resource type="PackedScene" uid="uid://b8c5igsv2gu6n" path="res://scenes/gift.tscn" id="2_gan4w"]
 [ext_resource type="Texture2D" uid="uid://cuyfoarv40jxb" path="res://sprites/essie_padoru/essie_padoru2.png" id="2_q0dus"]
 [ext_resource type="Texture2D" uid="uid://bhmygsok2klx1" path="res://sprites/essie_padoru/essie_padoru3.png" id="3_aiofs"]
 [ext_resource type="Texture2D" uid="uid://dithao0kvrpk" path="res://sprites/essie_padoru/essie_padoru4.png" id="4_didic"]

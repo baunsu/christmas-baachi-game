@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b8c5igsv2gu6n"]
 
-[ext_resource type="Script" path="res://gift.gd" id="1_rwx6o"]
-[ext_resource type="Texture2D" uid="uid://c2lcon2bmpuo3" path="res://sprites/present.png" id="2_5nhhq"]
+[ext_resource type="Script" path="res://scripts/gift.gd" id="1_nqtux"]
+[ext_resource type="Texture2D" uid="uid://c2lcon2bmpuo3" path="res://sprites/present.png" id="2_l12ds"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhlk3"]
 size = Vector2(24, 28)
@@ -9,13 +9,13 @@ size = Vector2(24, 28)
 [node name="gift" type="Area2D"]
 collision_layer = 4
 collision_mask = 2
-script = ExtResource("1_rwx6o")
+script = ExtResource("1_nqtux")
 speed = 500
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_5nhhq")
+texture = ExtResource("2_l12ds")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_uhlk3")

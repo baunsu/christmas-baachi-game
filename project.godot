@@ -16,8 +16,8 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 
 [display]
 
-window/size/viewport_width=780
-window/size/viewport_height=900
+window/size/viewport_width=480
+window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 
 [dotnet]

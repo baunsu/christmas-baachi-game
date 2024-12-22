@@ -37,7 +37,7 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_xbx4u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_vwud7")
 frame_progress = 0.318459
 speed_scale = 1.5

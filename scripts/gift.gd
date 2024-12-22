@@ -1,6 +1,9 @@
 extends Area2D
 
 @export var speed = 750
+var red_gift = preload("res://sprites/presents/red.png")
+var green_gift = preload("res://sprites/presents/green.png")
+var blue_gift = preload("res://sprites/presents/blue.png")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

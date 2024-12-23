@@ -12,18 +12,20 @@ signal hit(points)
 func _process(delta: float) -> void:
 	position -= transform.y * speed * delta
 
-func get_score(body):
+func add_score(body):
 	if body.is_in_group("Baachi"):
 		points = 1
 		if body.color == color:
 			points = 3
-		#print(points)
 		Global.score += points
+		body.queue_free()
+	if body.is_in_group("totem"):
+		Global.time = true
 		body.queue_free()
 	queue_free()
 
 func _on_body_entered(body: Node2D) -> void:
-	get_score(body)
+	add_score(body)
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()

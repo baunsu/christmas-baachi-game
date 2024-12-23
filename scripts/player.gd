@@ -17,13 +17,13 @@ func _process(delta: float) -> void:
 		velocity.x += 1
 	if Input.is_action_pressed("move_left"):
 		velocity.x -= 1
-	
-	if Input.is_action_just_pressed("shoot_red") and shooting == false:
-		shoot("red")
-	if Input.is_action_just_pressed("shoot_green") and shooting == false:
-		shoot("green")
-	if Input.is_action_just_pressed("shoot_blue") and shooting == false:
-		shoot("blue")
+	if shooting == false:
+		if Input.is_action_just_pressed("shoot_red"):
+			shoot("red")
+		if Input.is_action_just_pressed("shoot_green"):
+			shoot("green")
+		if Input.is_action_just_pressed("shoot_blue"):
+			shoot("blue")
 	
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed

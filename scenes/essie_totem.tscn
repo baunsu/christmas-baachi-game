@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqn8pjb463e1p"]
+
+[ext_resource type="Script" path="res://scripts/essie_totem.gd" id="1_33uch"]
+[ext_resource type="Texture2D" uid="uid://c25c3wnauvpbe" path="res://sprites/essie_ch_mini.png" id="2_s0v0i"]
+[ext_resource type="AudioStream" uid="uid://dtqs7sdaheb1f" path="res://sounds/essie_jibberish.wav" id="3_ucsmk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3tgm7"]
+size = Vector2(42, 56)
+
+[node name="EssieTotem" type="RigidBody2D" groups=["totem"]]
+collision_layer = 8
+collision_mask = 4
+gravity_scale = 0.0
+script = ExtResource("1_33uch")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_s0v0i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3tgm7")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." groups=["totem"]]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ucsmk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://itumbk8qjpc2"]
+[gd_scene load_steps=11 format=4 uid="uid://itumbk8qjpc2"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_5tgvq"]
 [ext_resource type="PackedScene" uid="uid://w1dpea27o4ra" path="res://scenes/enemy.tscn" id="2_2ai1k"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://c4dyfyetc5p7g" path="res://sprites/tiles/snow.png" id="4_0xs28"]
 [ext_resource type="PackedScene" uid="uid://b8c5igsv2gu6n" path="res://scenes/gift.tscn" id="4_atdp8"]
 [ext_resource type="PackedScene" uid="uid://cl02bfakrlfcu" path="res://scenes/hud.tscn" id="6_1jbbn"]
+[ext_resource type="PackedScene" uid="uid://cqn8pjb463e1p" path="res://scenes/essie_totem.tscn" id="7_7q6s1"]
+[ext_resource type="AudioStream" uid="uid://ce4fxkqg06r3d" path="res://sounds/essie_not_goated.wav" id="8_lwawu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8cgea"]
 texture = ExtResource("4_0xs28")
@@ -22,6 +24,8 @@ sources/1 = SubResource("TileSetAtlasSource_8cgea")
 [node name="Main" type="Node"]
 script = ExtResource("1_5tgvq")
 mob_scene = ExtResource("2_2ai1k")
+essie_totem = ExtResource("7_7q6s1")
+game_time = 10.0
 
 [node name="Player" parent="." instance=ExtResource("3_mvnoj")]
 z_index = 1
@@ -51,7 +55,14 @@ position = Vector2(490, 140)
 
 [node name="HUD" parent="." instance=ExtResource("6_1jbbn")]
 
+[node name="TotemSpawn" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="GameOverSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_lwawu")
+
 [connection signal="timeout" from="BaachiTimer" to="." method="_on_baachi_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
 [connection signal="end_game" from="HUD" to="." method="game_over"]
 [connection signal="start_game" from="HUD" to="." method="new_game"]
+[connection signal="timeout" from="TotemSpawn" to="." method="_on_totem_spawn_timeout"]

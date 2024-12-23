@@ -4,6 +4,10 @@ signal start_game
 signal end_game
 	
 func update_time():
+	var currtime = $TimeLimit.time_left
+	if Global.time == true:
+		Global.time = false
+		$TimeLimit.start(currtime + 10)
 	$Time.text = str(ceil($TimeLimit.time_left))
 	
 func show_message(text):
@@ -15,10 +19,10 @@ func show_game_over():
 	show_message("Game Over")
 	await $MessageTimer.timeout
 	
-	$Message.text = "Merry Christmas"
+	$Message.text = "Essie Saves Christmas"
 	$Message.show()
 	
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(3.0).timeout
 	$Start.show()
 	
 func update_score(score):

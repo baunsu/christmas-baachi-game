@@ -3,10 +3,8 @@ extends Area2D
 @export var Bullet : PackedScene
 @export var speed = 400
 var screen_size
-
-signal shoot_red
-signal shoot_green
-signal shoot_blue
+var shooting = false
+var bullet
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,11 +18,11 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("move_left"):
 		velocity.x -= 1
 	
-	if Input.is_action_just_pressed("shoot_red"):
+	if Input.is_action_just_pressed("shoot_red") and shooting == false:
 		shoot("red")
-	if Input.is_action_just_pressed("shoot_green"):
+	if Input.is_action_just_pressed("shoot_green") and shooting == false:
 		shoot("green")
-	if Input.is_action_just_pressed("shoot_blue"):
+	if Input.is_action_just_pressed("shoot_blue") and shooting == false:
 		shoot("blue")
 	
 	if velocity.length() > 0:
@@ -42,16 +40,22 @@ func start(pos):
 	$CollisionShape2D.disabled = false
 
 func shoot(color):
-	var bullet = Bullet.instantiate()
+	shooting = true
+	bullet = Bullet.instantiate()
 	match color:
 		"red":
 			bullet.speed = 450
 			bullet.get_node("Sprite2D").texture = bullet.red_gift
+			bullet.color = color
 		"green":
 			bullet.speed = 600
 			bullet.get_node("Sprite2D").texture = bullet.green_gift
+			bullet.color = color
 		"blue":
 			bullet.speed = 750
 			bullet.get_node("Sprite2D").texture = bullet.blue_gift
+			bullet.color = color
 	owner.add_child(bullet)
 	bullet.transform = $gift_throw_pos.global_transform
+	await get_tree().create_timer(0.10).timeout
+	shooting = false

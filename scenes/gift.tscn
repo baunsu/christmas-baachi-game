@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhlk3"]
 size = Vector2(24, 28)
 
-[node name="gift" type="Area2D"]
+[node name="gift" type="Area2D" groups=["gifts"]]
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_nqtux")

@@ -53,4 +53,5 @@ position = Vector2(490, 140)
 
 [connection signal="timeout" from="BaachiTimer" to="." method="_on_baachi_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="end_game" from="HUD" to="." method="game_over"]
 [connection signal="start_game" from="HUD" to="." method="new_game"]

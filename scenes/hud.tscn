@@ -59,5 +59,25 @@ text = "Start"
 wait_time = 2.0
 one_shot = true
 
+[node name="Time" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_bottom = 74.0
+grow_horizontal = 0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_168ax")
+theme_override_font_sizes/font_size = 64
+text = "30
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimeLimit" type="Timer" parent="."]
+wait_time = 3.0
+
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]
+[connection signal="timeout" from="TimeLimit" to="." method="_on_time_limit_timeout"]

@@ -7,7 +7,7 @@ func update_time():
 	var currtime = $TimeLimit.time_left
 	if Global.time == true:
 		Global.time = false
-		$TimeLimit.start(currtime + 10)
+		$TimeLimit.start(currtime + 7)
 	$Time.text = str(ceil($TimeLimit.time_left))
 	
 func show_message(text):

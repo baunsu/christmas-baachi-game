@@ -57,5 +57,5 @@ func shoot(color):
 			bullet.color = color
 	owner.add_child(bullet)
 	bullet.transform = $gift_throw_pos.global_transform
-	await get_tree().create_timer(0.10).timeout
+	await get_tree().create_timer(0.35).timeout
 	shooting = false

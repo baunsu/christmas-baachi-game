@@ -80,7 +80,7 @@ func _on_totem_spawn_timeout() -> void:
 			speed *= -1
 	
 	totem.position = totem_spawn.position
-	var velocity = Vector2(350.0, 0.0)
+	var velocity = Vector2(375.0, 0.0)
 	totem.linear_velocity = velocity.normalized() * speed
 	
 	add_child(totem)

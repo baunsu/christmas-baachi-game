@@ -72,3 +72,7 @@ shoot_blue={
 2d_physics/layer_2="baachi"
 2d_physics/layer_3="gift"
 2d_physics/layer_4="totem"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
